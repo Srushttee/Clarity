@@ -1,0 +1,83 @@
+.hero {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at center, #020617 0%, #000314 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 64px;
+  font-weight: 400; /* Impact looks bold by default */
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+
+.hero-subtitle {
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: #cbd5e1;
+  margin-bottom: 40px;
+}
+
+.hero-button {
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  color: #020617;
+  border: none;
+  padding: 14px 42px; /* slightly wider for elegance */
+  font-size: 16px;
+  font-weight: 600; /* a bit bolder for clarity */
+  border-radius: 50px; /* smooth, modern pill shape */
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); /* smoother transition */
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15); /* subtle depth */
+}
+
+.hero-button:hover {
+  transform: translateY(-3px) scale(1.03); /* lift + subtle scale */
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25); /* more pop on hover */
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); /* gentle highlight */
+}
+
+.hero-button:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.12);
+}
+
+/* ===== Fade-in Animations ===== */
+
+.fade-in-title {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
