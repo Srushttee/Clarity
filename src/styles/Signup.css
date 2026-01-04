@@ -1,5 +1,5 @@
-.login-container {
-  min-height: 100vh;
+.signup-container {
+  min-height: 100vh; /* responsive */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,13 +8,14 @@
 }
 
 /* FLOATING CARD */
-.login-card {
+.signup-card {
   background: #020617;
+  padding: 60px 50px 50px;
   width: 100%;
-  max-width: 420px;
-  padding: 50px 40px;
+  max-width: 460px; /* responsive */
   border-radius: 18px;
 
+  /* PURPLE SHADOW */
   box-shadow:
     0 30px 80px rgba(168, 85, 247, 0.35),
     0 0 60px rgba(168, 85, 247, 0.25);
@@ -23,19 +24,20 @@
 }
 
 /* TITLE */
-.login-heading {
+.signup-heading {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(30px, 5vw, 42px);
+  font-size: clamp(28px, 5vw, 40px);
   font-weight: 400;
+  letter-spacing: 1px;
+  color: #ffffff;
   text-align: center;
-  margin-bottom: 40px;
-  color: white;
+  margin-bottom: 50px;
 }
 
 /* INPUTS */
 .input-group {
   position: relative;
-  margin-bottom: 34px;
+  margin-bottom: 36px;
 }
 
 /* ✨ Enhanced input with soft transitions */
@@ -55,13 +57,13 @@
     color 0.25s ease;
 }
 
-/* Soft focus underline + glow */
+/* Soft purple focus */
 .input-group input:focus {
   border-bottom-color: #a855f7;
   box-shadow: 0 2px 0 rgba(168, 85, 247, 0.6);
 }
 
-/* Placeholder smooth fade */
+/* Placeholder fade */
 .input-group input::placeholder {
   color: #cbd5e1;
   transition: color 0.25s ease;
@@ -71,7 +73,7 @@
   color: #64748b;
 }
 
-/* Icon alignment + soft response */
+/* Icon alignment + reaction */
 .icon {
   position: absolute;
   left: 0;
@@ -88,54 +90,49 @@
   opacity: 1;
 }
 
-/* FORGOT PASSWORD */
-.forgot {
-  position: absolute;
-  right: 0;
-  bottom: -22px;
-  font-size: 13px;
-  color: #94a3b8;
-  cursor: pointer;
-  transition: color 0.25s ease;
-}
-
-.forgot:hover {
-  color: white;
-}
-
-/* LOGIN BUTTON */
-.login-btn {
-  width: 100%;
+/* BUTTONS */
+.button-group {
+  display: flex;
+  gap: 20px;
   margin-top: 30px;
-  padding: 12px;
+  justify-content: center;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 12px 26px;
   border-radius: 999px;
   border: none;
-  background-color: white;
-  color: #020617;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.login-btn:hover {
+/* PRIMARY */
+.primary-btn {
+  background-color: white;
+  color: #020617;
+}
+
+.primary-btn:hover {
   transform: translateY(-2px);
   box-shadow:
     0 0 14px rgba(168, 85, 247, 0.6),
     0 0 32px rgba(168, 85, 247, 0.4);
 }
 
-/* SIGNUP TEXT */
-.signup-text {
-  margin-top: 30px;
-  font-size: 13px;
-  text-align: center;
-  color: #94a3b8;
+/* SECONDARY */
+.secondary-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
 }
 
-.signup-text span {
-  color: white;
-  cursor: pointer;
+.secondary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 12px rgba(168, 85, 247, 0.5),
+    0 0 28px rgba(168, 85, 247, 0.35);
 }
 
 /* FADE ANIMATION */
@@ -152,7 +149,18 @@
 
 /* 📱 MOBILE */
 @media (max-width: 768px) {
-  .login-card {
+  .signup-card {
     padding: 40px 24px;
+    border-radius: 14px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
   }
 }

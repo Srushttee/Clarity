@@ -1,14 +1,13 @@
 import "../styles/login.css";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
   return (
     <div className="login-container">
-      {/* Left image section */}
-      <div className="login-image"><img src="assets/Login.jpg" alt="" /></div>
-
-      {/* Right form section */}
-      <div className="login-form-section">
-        <h1 className="login-heading">Login</h1>
+      <div className="login-card">
+        <h1 className="login-heading fade-title">Login</h1>
 
         <div className="input-group">
           <span className="icon">✉</span>
@@ -18,13 +17,16 @@ function Login() {
         <div className="input-group">
           <span className="icon">🔒</span>
           <input type="password" placeholder="Password" />
-          <span className="forgot">Forgot Password ?</span>
+          <span className="forgot">Forgot Password?</span>
         </div>
 
         <button className="login-btn">Login</button>
 
         <p className="signup-text">
-          Don't have an account ? <span>Sign Up here .</span>
+          Don't have an account?{" "}
+          <span onClick={() => navigate("/signup")}>
+            Sign Up here.
+          </span>
         </p>
       </div>
     </div>
