@@ -1,6 +1,9 @@
+/* ========================= */
+/* HERO SECTION */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
+  padding: 0 24px;
   background: radial-gradient(circle at center, #020617 0%, #000314 70%);
   display: flex;
   flex-direction: column;
@@ -9,41 +12,48 @@
   text-align: center;
 }
 
+/* ========================= */
+/* TITLE */
 .hero-title {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 64px;
-  font-weight: 400; /* Impact looks bold by default */
+  font-weight: 400;
   letter-spacing: 2px;
   color: #ffffff;
   margin-bottom: 20px;
   text-transform: uppercase;
+  line-height: 1.15;
 }
 
-
+/* ========================= */
+/* SUBTITLE */
 .hero-subtitle {
   font-size: 22px;
   letter-spacing: 3px;
   color: #cbd5e1;
   margin-bottom: 40px;
+  max-width: 900px;
 }
 
+/* ========================= */
+/* BUTTON */
 .hero-button {
   background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
   color: #020617;
   border: none;
-  padding: 14px 42px; /* slightly wider for elegance */
+  padding: 14px 42px;
   font-size: 16px;
-  font-weight: 600; /* a bit bolder for clarity */
-  border-radius: 50px; /* smooth, modern pill shape */
+  font-weight: 600;
+  border-radius: 50px;
   cursor: pointer;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); /* smoother transition */
-  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15); /* subtle depth */
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
 }
 
 .hero-button:hover {
-  transform: translateY(-3px) scale(1.03); /* lift + subtle scale */
-  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25); /* more pop on hover */
-  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); /* gentle highlight */
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
 }
 
 .hero-button:active {
@@ -51,8 +61,8 @@
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.12);
 }
 
-/* ===== Fade-in Animations ===== */
-
+/* ========================= */
+/* FADE-IN ANIMATIONS */
 .fade-in-title {
   opacity: 0;
   animation: fadeUp 1s ease-out forwards;
@@ -81,3 +91,43 @@
   }
 }
 
+/* ========================= */
+/* MOBILE (≤ 480px) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 0 16px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin-bottom: 28px;
+  }
+
+  .hero-button {
+    width: 100%;
+    max-width: 260px;
+    padding: 14px 0;
+    font-size: 15px;
+  }
+}
+
+/* ========================= */
+/* TABLET (481px – 768px) */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 44px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+}
